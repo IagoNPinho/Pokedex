@@ -2,7 +2,7 @@ const pokeApi = {}
 
 function convertPokeApiDetailToPokemon(PokeDetail) {
     const pokemon = new PokemonModel();
-    pokemon.number = PokeDetail.order;
+    pokemon.number = PokeDetail.id;
     pokemon.name = PokeDetail.name;
 
     const types = PokeDetail.types.map((typeSlot) => typeSlot.type.name);
@@ -16,7 +16,7 @@ function convertPokeApiDetailToPokemon(PokeDetail) {
 }
 
 
-pokeApi.getPokemonDetail = (pokemon) => {
+pokeApi.getPokemonDetailSimplify = (pokemon) => {
     return fetch(pokemon.url)
         .then((response) => response.json())
         .then(convertPokeApiDetailToPokemon);
@@ -27,8 +27,12 @@ pokeApi.getPokemons = (offset = 0, limit = 10) => {
     return fetch(url)
         .then((response) => response.json())
         .then((jsonBody) => jsonBody.results)
-        .then((pokemons) => pokemons.map(pokeApi.getPokemonDetail))
+        .then((pokemons) => pokemons.map(pokeApi.getPokemonDetailSimplify))
         .then((detailRequests) => Promise.all(detailRequests))
         .then((pokemonsDetails) => pokemonsDetails)
         .catch((error) => console.log(error));
+}
+
+pokeApi.getPokemonDetailComplex = (pokemon) => {
+    const url = `https://pokeapi.co/api/v2/pokemon-species/${pokemon.order}/`;
 }
