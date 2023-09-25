@@ -21,15 +21,80 @@
     <!-- Nosso CSS -->
     <link rel="stylesheet" href="/assets/css/global.css">
     <link rel="stylesheet" href="/assets/css/pokedex.css">
-
 </head>
-
 <body>
     <section class="content">
         <h1>Pokedex</h1>
         <!-- Lista de Pokemons -->
-        <ol id="pokemonList" class="pokemons"></ol>
+        <ol id="pokemonList" class="pokemons">
+            <li class="pokemon grass button" role="button">
+                <span class="number">#001</span>
+                <span class="name">Bulbasaur</span>
+            <div class="detail">
+                <ol class="types">
+                    <li class="type grass">
+                        grass
+                    </li>
+                    <li class="type poison">
+                        poison
+                    </li>
+                </ol>
+                <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/1.svg"
+                    alt="${pokemon.name}">
+            </div>
+        </li>
+        <div class="window_modal" id="window_modal">
+            <section class="modal">
+                <button class="fechar" id="fechar">&larr;</button>
+                <ol>
+                    <li><span>Bulbasaur</span></li>
+                    <li><span>#001</span></li>
+                </ol>
+                <ol class="types_detail">
+                    <li class="type grass">grass</li>
+                    <li class="type poison">poison</li>
+                </ol>
+                <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/1.svg"
+                    alt="${pokemon.name}" class="image_detail">
+                <h2 class="about">About</h1>
+                <ol>
+                    <ol>
+                        <li class="information">Specie</li>
+                        <li class="result">Seed</li>
+                    </ol>
+                    <ol>
+                        <li class="information">Height</li>
+                        <li class="result">2'3.6* (0,70 cm)</li>
+                    </ol>
+                    <ol>
+                        <li class="information">Weight</li>
+                        <li class="result">15.2 lbs (6,9 kg)</li>
+                    </ol>
+                    <ol>
+                        <li class="information">Abilities</li>
+                        <li class="result">Overgrow, Chlorophyl</li>
+                    </ol>
+                </ol>
+                <h3 class="about">Breeding</h3>
+                <ol>
+                    <ol>
+                        <li class="information">Gender</li>
+                        <li class="result">Male 87.5%</li>
+                        <li class="result">Female 12.5%</li>
+                    </ol>
+                    <ol>
+                        <li class="information">Egg group</li>
+                        <li class="result">Monster</li>
+                    </ol>
+                    <ol>
+                        <li class="information">Egg Cycle</li>
+                        <li class="result">Grass</li>
+                    </ol>
+                </ol>
 
+            </section>
+        </div>
+        </ol>
         <div class="pagination">
             <button id="loadMoreButton" type="button">
                 Load More
@@ -37,9 +102,11 @@
         </div>
     </section>
     <!-- Nosso JS -->
+    <!--
     <script src="/assets/js/poke_api.js"></script>
     <script src="/assets/js/pokemon_model.js"></script>
     <script src="/assets/js/main.js"></script>
+    -->
 </body>
 
 </html> 
