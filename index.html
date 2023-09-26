@@ -21,34 +21,18 @@
     <!-- Nosso CSS -->
     <link rel="stylesheet" href="/assets/css/global.css">
     <link rel="stylesheet" href="/assets/css/pokedex.css">
+    <link rel="stylesheet" href="/assets/css/poke_detail.css">
+    <link rel="stylesheet" href="/assets/css/rolagem.css">
 </head>
+
 <body>
-    <section class="content">
-        <h1>Pokedex</h1>
-        <!-- Lista de Pokemons -->
-        <ol id="pokemonList" class="pokemons">
-            <li class="pokemon grass button" role="button">
-                <span class="number">#001</span>
-                <span class="name">Bulbasaur</span>
-            <div class="detail">
-                <ol class="types">
-                    <li class="type grass">
-                        grass
-                    </li>
-                    <li class="type poison">
-                        poison
-                    </li>
-                </ol>
-                <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/1.svg"
-                    alt="${pokemon.name}">
-            </div>
-        </li>
-        <div class="window_modal" id="window_modal">
-            <section class="modal">
+    <div class="window_modal" id="window_modal">
+        <section class="modal">
+            <div class="content_modal">
                 <button class="fechar" id="fechar">&larr;</button>
-                <ol>
-                    <li><span>Bulbasaur</span></li>
-                    <li><span>#001</span></li>
+                <ol class="header_modal">
+                    <li class="name_modal">Bulbasaur</li>
+                    <li class="number_modal">#001</li>
                 </ol>
                 <ol class="types_detail">
                     <li class="type grass">grass</li>
@@ -56,7 +40,7 @@
                 </ol>
                 <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/1.svg"
                     alt="${pokemon.name}" class="image_detail">
-                <h2 class="about">About</h1>
+                <h2 class="about">About</h2>
                 <ol>
                     <ol>
                         <li class="information">Specie</li>
@@ -72,7 +56,12 @@
                     </ol>
                     <ol>
                         <li class="information">Abilities</li>
-                        <li class="result">Overgrow, Chlorophyl</li>
+                        <li class="results">
+                            <ol>
+                                <li>Overgrow</li>
+                                <li>Chlorophyl</li>
+                            </ol>
+                        </li>
                     </ol>
                 </ol>
                 <h3 class="about">Breeding</h3>
@@ -91,16 +80,39 @@
                         <li class="result">Grass</li>
                     </ol>
                 </ol>
+            </div>
 
-            </section>
-        </div>
+        </section>
+    </div>
+    <section class="content">
+        <h1>Pokedex</h1>
+        <!-- Lista de Pokemons -->
+        <ol id="pokemonList" class="pokemons">
+            <li class="pokemon grass button" role="button">
+                <span class="number">#001</span>
+                <span class="name">Bulbasaur</span>
+                <div class="detail">
+                    <ol class="types">
+                        <li class="type grass">
+                            grass
+                        </li>
+                        <li class="type poison">
+                            poison
+                        </li>
+                    </ol>
+                    <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/1.svg"
+                        alt="${pokemon.name}">
+                </div>
+            </li>
         </ol>
+
         <div class="pagination">
             <button id="loadMoreButton" type="button">
                 Load More
             </button>
         </div>
     </section>
+
     <!-- Nosso JS -->
     <!--
     <script src="/assets/js/poke_api.js"></script>
@@ -109,4 +121,4 @@
     -->
 </body>
 
-</html> 
+</html>

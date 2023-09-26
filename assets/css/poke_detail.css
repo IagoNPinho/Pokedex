@@ -1,0 +1,60 @@
+.window_modal {
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    top: 0;
+    left: 0;
+    background-color: #00000080;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 999;
+}
+
+.modal{
+    width: 80vw;
+    min-width: 15.625rem;
+    height: 80vh;
+    min-height: 28.375rem;
+    padding: 0.5rem 0.9rem;
+    margin: 0;
+    border-radius: 1.25rem;
+    background-color: #77c850;
+    overflow: scroll;
+    overflow-x: hidden;
+}
+
+.content_modal{
+    padding: 0.5rem 0.5rem;
+}
+
+.fechar {
+    border: none;
+    background-color: transparent;
+    margin: 0;
+    padding: 0;
+    font-size: 1.2rem;
+    color: #fff;
+    height: 2rem;
+}
+
+.header_modal{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.name_modal{
+    color: #fff;
+    font-size: 2rem;
+    text-transform: capitalize;
+    margin-bottom: 0;
+}
+
+.number_modal{
+    text-align: right;
+    color: #fff;
+    font-size: 0.825rem;
+    position: relative;
+    top: -0.9rem;
+}
