@@ -16,7 +16,7 @@
     min-width: 15.625rem;
     height: 80vh;
     min-height: 28.375rem;
-    padding: 0.5rem 0.9rem;
+    padding: 0.8rem 0rem 0.8rem 0.5rem;
     margin: 0;
     border-radius: 1.25rem;
     background-color: #77c850;
@@ -41,7 +41,7 @@
 .header_modal{
     list-style: none;
     padding: 0;
-    margin: 0;
+    margin: 0.8rem 0 0 0;
 }
 
 .name_modal{
@@ -57,4 +57,31 @@
     font-size: 0.825rem;
     position: relative;
     top: -0.9rem;
+}
+
+.types_modal{
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: row;
+    align-items: start;
+    justify-content: flex-start;
+    position: relative;
+    top: -0.9rem;
+}
+
+.type_modal {
+    padding: 0.55rem 1.5rem;
+    margin: 0rem .6rem 0.4rem 0rem;
+    font-size: 0.85rem;
+    min-width: 2.5rem;
+}
+
+.content_information{
+    background-color: #fff;
+    padding: 0;
+    margin: 0;
+    position: relative;
+    left: -.5rem;
 }
