@@ -27,24 +27,3 @@ body::-webkit-scrollbar-thumb {
   border-radius: 20px;
   border: 3px solid transparent;
 }
-
-.modal::-webkit-scrollbar {
-  width: 12px;  
-  position: absolute;
-  left: 20rem;
-}
-
-.modal::-webkit-scrollbar-track {
-  background: #fff;
-  border-radius: 2rem;
-  position: absolute;
-  left: 20rem;
-}
-
-.modal::-webkit-scrollbar-thumb {
-  background-color: #77c850;
-  border-radius: 2rem;
-  border: 3px solid #fff;
-  position: absolute;
-  left: 20rem;
-}

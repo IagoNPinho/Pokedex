@@ -38,48 +38,54 @@
                     <li class="type type_modal grass">grass</li>
                     <li class="type type_modal poison">poison</li>
                 </ol>
-                <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/1.svg"
-                    alt="${pokemon.name}" class="image_detail">
+                <div class="image_container">
+                    <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/1.svg"
+                        alt="${pokemon.name}" class="image_detail">
+                </div>
             </div>
             <div class="content_information">
                 <h2 class="topic">About</h2>
-                <ol>
-                    <ol>
-                        <li class="information">Specie</li>
-                        <li class="result">Seed</li>
+                <ol class="informations">
+                    <li>
+                        <ol class="list_information">
+                            <li class="information">Specie</li>
+                            <li class="information">Height</li>
+                            <li class="information">Weight</li>
+                            <li class="information information_abilities">Abilities</li>
+                        </ol>
+                    </li>
+                    <li>
+                        <ol class="list_result">
+                            <li class="result">Seed</li>
+                            <li class="result">2'3.6* (0,70 cm)</li>
+                            <li class="result">15.2 lbs (6,9 kg)</li>
+                            <li>
+                                <ol class="list_abilities">
+                                    <li class="abilities">Overgrow</li>
+                                    <li class="abilities">Chlorophyl</li>
+                                </ol>
+                            </li>
+                        </ol>
+                    </li>
+                </ol>
+                <h2 class="topic">Breeding</h2>
+                <ol class="informations">
+                    <ol class="list_information">
+                        <li class="information breeding">Gender</li>
+                        <li class="information breeding">Egg group</li>
+                        <li class="information breeding">Egg Cycle</li>
                     </ol>
-                    <ol>
-                        <li class="information">Height</li>
-                        <li class="result">2'3.6* (0,70 cm)</li>
-                    </ol>
-                    <ol>
-                        <li class="information">Weight</li>
-                        <li class="result">15.2 lbs (6,9 kg)</li>
-                    </ol>
-                    <ol>
-                        <li class="information">Abilities</li>
-                        <li class="results">
-                            <ol>
-                                <li>Overgrow</li>
-                                <li>Chlorophyl</li>
+                    <ol class="list_result">
+                        <li>
+                            <ol class="list_abilities">
+                                <li class="abilities gender">Male <span>87.5%</span></li>
+                                <li class="abilities gender">Female <span>12.5%</span></li>
                             </ol>
                         </li>
-                    </ol>
-                </ol>
-                <h3 class="about">Breeding</h3>
-                <ol>
-                    <ol>
-                        <li class="information">Gender</li>
-                        <li class="result">Male 87.5%</li>
-                        <li class="result">Female 12.5%</li>
+                        <li class="result res_breending">Monster</li>
+                        <li class="result res_breending">Grass</li>
                     </ol>
                     <ol>
-                        <li class="information">Egg group</li>
-                        <li class="result">Monster</li>
-                    </ol>
-                    <ol>
-                        <li class="information">Egg Cycle</li>
-                        <li class="result">Grass</li>
                     </ol>
                 </ol>
             </div>
