@@ -26,6 +26,35 @@
 </head>
 
 <body>
+    <section class="content">
+        <h1>Pokedex</h1>
+        <!-- Lista de Pokemons -->
+        <ol id="pokemonList" class="pokemons">
+            <li onclick="abrirModal()" class="pokemon grass">
+                <span class="number">#001</span>
+                <span class="name">Bulbasaur</span>
+                <div class="detail">
+                    <ol class="types">
+                        <li class="type grass">
+                            grass
+                        </li>
+                        <li class="type poison">
+                            poison
+                        </li>
+                    </ol>
+                    <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/1.svg"
+                    alt="${pokemon.name}">
+                </div>
+            </li>
+        </ol>
+        
+        <div class="pagination">
+            <button id="loadMoreButton" type="button">
+                Load More
+            </button>
+        </div>
+    </section>
+
     <div class="window_modal" id="window_modal">
         <section class="modal">
             <div class="content_modal">
@@ -71,7 +100,7 @@
                 <h2 class="topic">Breeding</h2>
                 <ol class="informations">
                     <ol class="list_information">
-                        <li class="information breeding">Gender</li>
+                        <li class="information breeding margin">Gender</li>
                         <li class="information breeding">Egg group</li>
                         <li class="information breeding">Egg Cycle</li>
                     </ol>
@@ -82,8 +111,8 @@
                                 <li class="abilities gender">Female <span>12.5%</span></li>
                             </ol>
                         </li>
-                        <li class="result res_breending">Monster</li>
-                        <li class="result res_breending">Grass</li>
+                        <li class="result res_breeding">Monster</li>
+                        <li class="result res_breeding">Grass</li>
                     </ol>
                     <ol>
                     </ol>
@@ -91,35 +120,8 @@
             </div>
         </section>
     </div>
-    <section class="content">
-        <h1>Pokedex</h1>
-        <!-- Lista de Pokemons -->
-        <ol id="pokemonList" class="pokemons">
-            <li class="pokemon grass button" role="button">
-                <span class="number">#001</span>
-                <span class="name">Bulbasaur</span>
-                <div class="detail">
-                    <ol class="types">
-                        <li class="type grass">
-                            grass
-                        </li>
-                        <li class="type poison">
-                            poison
-                        </li>
-                    </ol>
-                    <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/1.svg"
-                        alt="${pokemon.name}">
-                </div>
-            </li>
-        </ol>
-
-        <div class="pagination">
-            <button id="loadMoreButton" type="button">
-                Load More
-            </button>
-        </div>
-    </section>
-
+    
+    <script src="/assets/js/modal.js"></script>
     <!-- Nosso JS -->
     <!--
     <script src="/assets/js/poke_api.js"></script>

@@ -36,3 +36,42 @@ pokeApi.getPokemons = (offset = 0, limit = 10) => {
 pokeApi.getPokemonDetailComplex = (pokemon) => {
     const url = `https://pokeapi.co/api/v2/pokemon-species/${pokemon.order}/`;
 }
+
+/*
+URL - https://pokeapi.co/api/v2/pokemon-species/${pokemon.order}/
+Informações:
+- nome {[name]}
+- order {[order]}
+- especie {[genera][7][genus]}
+- egg group {[egg_groups][0][name]}
+- egg cyrcle {[egg_groups][1][name]}
+- 
+
+
+
+URL - https://pokeapi.co/api/v2/pokemon/${pokemon.order}/
+Informações:
+- nome {[name]}
+- order {[order]}
+- type1 {[types][0][type][name]}
+- type2 {[types][1][type][name]}
+- sprite {}
+
+- specie {[species][url]fetch(url)[genera][7][genus]}
+- Height {}
+- Weight {}
+- Abilities {}
+- Gender {}
+- Egg group {[species][url]fetch(url)[egg_groups][0][name]}
+- Egg cyrcle {[species][url]fetch(url)[egg_groups][1][name]}
+
+- HP {[stats][0][base_stat]}
+- Attack {[stats][1][base_stat]}
+- Defense {[stats][2][base_stat]}
+- Special Attack {[stats][3][base_stat]}
+- Special Defense {[stats][4][base_stat]}
+- Speed {[stats][5][base_stat]}
+- Total {HP + ATK + DEF + SATK + SDEF + SPEED}
+*/
+
+
