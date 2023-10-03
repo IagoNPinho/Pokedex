@@ -11,7 +11,7 @@ function convertPokeApiDetailToPokemon(PokeDetail) {
     pokemon.types = types;
     pokemon.type = type;
     pokemon.photo = PokeDetail.sprites.other.dream_world.front_default;
-
+    pokemon.height = PokeDetail.height;
     return pokemon;
 }
 
@@ -55,13 +55,15 @@ Informações:
 - order {[order]}
 - type1 {[types][0][type][name]}
 - type2 {[types][1][type][name]}
-- sprite {}
+- sprite {[sprites][other][dream_world][front_default]}
 
 - specie {[species][url]fetch(url)[genera][7][genus]}
-- Height {}
-- Weight {}
-- Abilities {}
-- Gender {}
+- Height {[height]}
+- Weight {weight}
+- Abilities 1 {[abilities][0][ability][name]}
+- Abilities 2 {[abilities][1][ability][name]}
+- Gender famale {[species][url]fetch(url)[gender_rate]*10}
+- Gender male {[species][url]fetch(url)[gender_rate]-10*(-10)}
 - Egg group {[species][url]fetch(url)[egg_groups][0][name]}
 - Egg cyrcle {[species][url]fetch(url)[egg_groups][1][name]}
 

@@ -4,13 +4,20 @@ class PokemonModel {
     type;
     types = [];
     photo;
-}
 
-class PokemonModelComplete {
-    name;
-    number;
-    type;
-    types = [];
-    photo;
     specie;
+    weight;
+    height;
+    abilities = [];
+    genderMale;
+    genderFemale;
+    eggGroup;
+    eggCircle;
+    hp;
+    attack;
+    defense;
+    specialAtk;
+    specialDef;
+    speed;
+    total;
 }
