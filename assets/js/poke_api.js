@@ -5,8 +5,12 @@ function convertPokeApiDetailToPokemon(PokeDetail) {
     const types = PokeDetail.types.map((typeSlot) => typeSlot.type.name);
     const [type] = types;
     const stats = PokeDetail.stats.map((statSlot) => statSlot.base_stat);
+    var statsTotal = 0;
+    stats.map((stat) => {
+        console.log(statsTotal);
+        statsTotal += stat;
+    })
 
-    const statsTotal = PokeDetail.stats.map((statSlot) => { vartotal = + statSlot.base_stat });
 
     pokemon.number = PokeDetail.id;
     pokemon.name = PokeDetail.name;
@@ -57,7 +61,25 @@ pokeApi.getPokemonDetail = (order) => {
         .then((pokemon) => pokemon);
 }
 
+pokeApi.getPokemonSpecie = (order) => {
+    const url = `https://pokeapi.co/api/v2/pokemon-species/${order}/`;
+    return fetch(url)
+        .then((response) => response.json())
+        .then((pokemon) => pokemon);
+}
+
 /*
+URL - https://pokeapi.co/api/v2/pokemon-species/${pokemon.order}/
+Informações:
+- nome {[name]}
+- order {[order]}
+- especie {[genera][7][genus]}
+- egg group {[egg_groups][0][name]}
+- egg cyrcle {[egg_groups][1][name]}
+- 
+
+
+
 URL - https://pokeapi.co/api/v2/pokemon/${pokemon.order}/
 Informações:
 - nome {[name]}

@@ -2,7 +2,11 @@ function abrirModal(number) {
     const modal = document.getElementById('window_modal');
     pokeApi.getPokemonDetail(number)
         .then(convertPokeApiDetailToPokemon)
-        .then();
+        .then((pokemon) => {
+            console.log(pokemon)
+            fetch(pokemon.specieUrl)
+                .then()
+        });
 
     modal.classList.add('abrir');
 
