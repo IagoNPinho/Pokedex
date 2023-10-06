@@ -31,7 +31,7 @@
         <!-- Lista de Pokemons -->
         <ol id="pokemonList" class="pokemons">
         </ol>
-        
+
         <div class="pagination">
             <button id="loadMoreButton" type="button">
                 Load More
@@ -39,77 +39,13 @@
         </div>
     </section>
 
-    <div class="window_modal" id="window_modal">
-        <section class="modal">
-            <div class="content_modal">
-                <button class="fechar" id="fechar">&larr;</button>
-                <ol class="header_modal">
-                    <li class="name_modal">Bulbasaur</li>
-                    <li class="number_modal">#001</li>
-                </ol>
-                <ol class="types_modal">
-                    <li class="type type_modal grass">grass</li>
-                    <li class="type type_modal poison">poison</li>
-                </ol>
-                <div class="image_container">
-                    <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/1.svg"
-                        alt="${pokemon.name}" class="image_detail">
-                </div>
-            </div>
-            <div class="content_information">
-                <h2 class="topic">About</h2>
-                <ol class="informations">
-                    <li>
-                        <ol class="list_information">
-                            <li class="information">Specie</li>
-                            <li class="information">Height</li>
-                            <li class="information">Weight</li>
-                            <li class="information information_abilities">Abilities</li>
-                        </ol>
-                    </li>
-                    <li>
-                        <ol class="list_result">
-                            <li class="result">Seed</li>
-                            <li class="result">2'3.6* (0,70 cm)</li>
-                            <li class="result">15.2 lbs (6,9 kg)</li>
-                            <li>
-                                <ol class="list_abilities">
-                                    <li class="abilities">Overgrow</li>
-                                    <li class="abilities">Chlorophyl</li>
-                                </ol>
-                            </li>
-                        </ol>
-                    </li>
-                </ol>
-                <h2 class="topic">Breeding</h2>
-                <ol class="informations">
-                    <ol class="list_information">
-                        <li class="information breeding margin">Gender</li>
-                        <li class="information breeding">Egg group</li>
-                        <li class="information breeding">Egg Cycle</li>
-                    </ol>
-                    <ol class="list_result">
-                        <li>
-                            <ol class="list_abilities">
-                                <li class="abilities gender">Male <span>87.5%</span></li>
-                                <li class="abilities gender">Female <span>12.5%</span></li>
-                            </ol>
-                        </li>
-                        <li class="result res_breeding">Monster</li>
-                        <li class="result res_breeding">Grass</li>
-                    </ol>
-                    <ol>
-                    </ol>
-                </ol>
-            </div>
-        </section>
-    </div>
-    
+    <div class="window_modal" id="window_modal"></div>
+
     <!-- Nosso JS -->
     <script src="/assets/js/modal.js"></script>
     <script src="/assets/js/poke_api.js"></script>
     <script src="/assets/js/pokemon_model.js"></script>
     <script src="/assets/js/main.js"></script>
 </body>
- 
+
 </html>

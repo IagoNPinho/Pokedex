@@ -22,9 +22,12 @@
     padding: 0.8rem 0.5rem 0.8rem 0.5rem;
     margin: 0;
     border-radius: 1.25rem 1rem 1rem 1.25rem;
-    background-color: #77c850;
     overflow: hidden;
     cursor: default;
+}
+
+.modal *{
+    text-transform: capitalize;
 }
 
 .content_modal{
@@ -190,7 +193,7 @@
 }
 
 .gender span{
-    font-size: 0.6rem;
+    font-size: 0.66rem;
 }
 
 .res_breending{

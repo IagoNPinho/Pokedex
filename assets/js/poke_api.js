@@ -1,31 +1,21 @@
 const pokeApi = {}
 
-function convertPokeApiDetailToPokemon(PokeDetail) {
+function convertPokeApiDetailToPokemon(pokeDetail, specieDetail = null) {
     const pokemon = new PokemonModel();
-    const types = PokeDetail.types.map((typeSlot) => typeSlot.type.name);
+    const types = pokeDetail.types.map((typeSlot) => typeSlot.type.name);
     const [type] = types;
-    const stats = PokeDetail.stats.map((statSlot) => statSlot.base_stat);
+    const stats = pokeDetail.stats.map((statSlot) => statSlot.base_stat);
     var statsTotal = 0;
-    stats.map((stat) => {
-        console.log(statsTotal);
-        statsTotal += stat;
-    })
-
-
-    pokemon.number = PokeDetail.id;
-    pokemon.name = PokeDetail.name;
+    stats.map((stat) => statsTotal += stat);
+    
+    pokemon.number = pokeDetail.id;
+    pokemon.name = pokeDetail.name;
     pokemon.types = types;
     pokemon.type = type;
-    pokemon.photo = PokeDetail.sprites.other.dream_world.front_default;
-    pokemon.specieUrl = PokeDetail.species.url;
-    pokemon.specie;
-    pokemon.height = PokeDetail.height;
-    pokemon.weight = PokeDetail.weight;
-    pokemon.abilities = PokeDetail.abilities.map((abilitySlot) => abilitySlot.ability.name);
-    pokemon.genderFemale;
-    pokemon.genderMale;
-    pokemon.eggGroup;
-    pokemon.eggCircle;
+    pokemon.photo = pokeDetail.sprites.other.dream_world.front_default;
+    pokemon.height = pokeDetail.height*10;
+    pokemon.weight = pokeDetail.weight/10;
+    pokemon.abilities = pokeDetail.abilities.map((abilitySlot) => abilitySlot.ability.name);
     pokemon.hp = stats[0];
     pokemon.attack = stats[1];
     pokemon.defense = stats[2];
@@ -33,6 +23,19 @@ function convertPokeApiDetailToPokemon(PokeDetail) {
     pokemon.specialDef = stats[4];
     pokemon.speed = stats[5];
     pokemon.total = statsTotal;
+    
+    if(specieDetail != null){
+        const especies = specieDetail.genera.map((specieSlot) => specieSlot.genus);
+        const eggs = specieDetail.egg_groups.map((eggSlot) => eggSlot.name);
+
+        pokemon.specie = especies[7];
+        pokemon.specieUrl = pokeDetail.species.url;
+        pokemon.genderFemale = specieDetail.gender_rate*10;
+        pokemon.genderMale = (pokemon.genderFemale - 100) *(-1);
+        pokemon.eggGroup = eggs[0];
+        pokemon.eggCircle = eggs[1];
+    }
+    
     return pokemon;
 }
 
@@ -58,15 +61,15 @@ pokeApi.getPokemonDetail = (order) => {
     const url = `https://pokeapi.co/api/v2/pokemon/${order}/`;
     return fetch(url)
         .then((response) => response.json())
-        .then((pokemon) => pokemon);
+        .then((pokeApiJson) => pokeApiJson);
 }
 
 pokeApi.getPokemonSpecie = (order) => {
     const url = `https://pokeapi.co/api/v2/pokemon-species/${order}/`;
     return fetch(url)
         .then((response) => response.json())
-        .then((pokemon) => pokemon);
-}
+        .then((pokeApiJson) => pokeApiJson);
+    }
 
 /*
 URL - https://pokeapi.co/api/v2/pokemon-species/${pokemon.order}/
