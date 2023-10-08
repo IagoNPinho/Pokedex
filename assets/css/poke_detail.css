@@ -27,6 +27,7 @@
 }
 
 .modal *{
+    list-style: none;
     text-transform: capitalize;
 }
 
@@ -46,7 +47,6 @@
 }
 
 .header_modal{
-    list-style: none;
     padding: 0;
     margin: 0.8rem 0 0 0;
 }
@@ -67,7 +67,6 @@
 }
 
 .types_modal{
-    list-style-type: none;
     padding: 0;
     margin: 0;
     display: flex;
@@ -121,17 +120,14 @@
 }
 
 .informations{
-    list-style: none;
     padding: 0;
     margin: 0 0 1rem 0;
-    list-style: none;
     display: flex;
     flex-direction: row;
     align-items: start;
 }
 
 .list_information{
-    list-style: none;
     margin: 0;
     padding: 0;
     display: flex;
@@ -149,7 +145,6 @@
 }
 
 .list_result{
-    list-style: none;
     margin: 0;
     padding: 0 0 0 1rem;
 }
@@ -160,7 +155,6 @@
 }
 
 .list_abilities{
-    list-style: none;
     display: flex;
     flex-direction: row;
     margin: 0;
@@ -197,7 +191,7 @@
 }
 
 .res_breending{
-    margin: 0.15rem 0 0 0; 
+    margin: 0.15rem 0 0 0;
 }
 
 .window_modal.abrir {
