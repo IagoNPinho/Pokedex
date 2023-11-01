@@ -20,6 +20,15 @@ body {
     z-index: 1;
 }
 
+.home{
+    display: flex;
+    flex-direction: row;
+}
+
+.logo{
+    margin: 0 0.8rem;
+}
+
 .pagination {
     display: flex;
     flex-direction: row;

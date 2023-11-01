@@ -139,7 +139,7 @@ img {
     }
 }
 
-@media screen and (min-width: 425px) {
+@media screen and (min-width: 375px) {
     .pokemons {
         grid-template-columns: 1fr 1fr;
     }
@@ -149,13 +149,13 @@ img {
     }
 }
 
-@media screen and (min-width: 630px) {
+@media screen and (min-width: 560px) {
     .pokemons {
         grid-template-columns: 1fr 1fr 1fr;
     }
 
     .pokemon {
-        margin: 1.5rem;
+        margin: .8rem;
     }
 }
 
